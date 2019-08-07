@@ -1,0 +1,21 @@
+{
+    "name": "Currency",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "currencyExchangeRate",
+            "otherEntityRelationshipName": "currency",
+            "relationshipName": "currencyExchangeRate"
+        }
+    ],
+    "changelogDate": "20190807100707",
+    "entityTableName": "currency",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

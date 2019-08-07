@@ -1,0 +1,27 @@
+{
+    "name": "CurrencyExchangeRate",
+    "fields": [
+        {
+            "fieldName": "exchangeRate",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "currency",
+            "otherEntityRelationshipName": "currencyExchangeRate",
+            "relationshipName": "currency",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190807100706",
+    "entityTableName": "currency_exchange_rate",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -17,7 +17,10 @@
     <include file="config/liquibase/changelog/20190806103223_added_entity_DocsType.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20190806103224_added_entity_SoDocs.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20190806103225_added_entity_ShippingOrder.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190807100706_added_entity_CurrencyExchangeRate.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190807100707_added_entity_Currency.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20190806103224_added_entity_constraints_SoDocs.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190807100706_added_entity_constraints_CurrencyExchangeRate.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

@@ -48,6 +48,9 @@ public class CacheConfiguration {
             createCache(cm, com.eshipper.domain.SoDocs.class.getName());
             createCache(cm, com.eshipper.domain.ShippingOrder.class.getName());
             createCache(cm, com.eshipper.domain.ShippingOrder.class.getName() + ".soDocs");
+            createCache(cm, com.eshipper.domain.CurrencyExchangeRate.class.getName());
+            createCache(cm, com.eshipper.domain.Currency.class.getName());
+            createCache(cm, com.eshipper.domain.Currency.class.getName() + ".currencyExchangeRates");
             // jhipster-needle-ehcache-add-entry
         };
     }

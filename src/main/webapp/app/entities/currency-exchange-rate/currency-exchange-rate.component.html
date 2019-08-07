@@ -1,0 +1,63 @@
+<div>
+    <h2 id="page-heading">
+        <span>Currency Exchange Rates</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-currency-exchange-rate" [routerLink]="['/currency-exchange-rate/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create a new Currency Exchange Rate
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="currencyExchangeRates?.length === 0">
+        <span>No currencyExchangeRates found</span>
+    </div>
+    <div class="table-responsive" *ngIf="currencyExchangeRates?.length > 0">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span>ID</span></th>
+            <th><span>Exchange Rate</span></th>
+            <th><span>Currency</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let currencyExchangeRate of currencyExchangeRates ;trackBy: trackId">
+                <td><a [routerLink]="['/currency-exchange-rate', currencyExchangeRate.id, 'view' ]">{{currencyExchangeRate.id}}</a></td>
+                <td>{{currencyExchangeRate.exchangeRate}}</td>
+                <td>
+                    <div *ngIf="currencyExchangeRate.currencyId">
+                        <a [routerLink]="['/currency', currencyExchangeRate.currencyId , 'view' ]" >{{currencyExchangeRate.currencyId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/currency-exchange-rate', currencyExchangeRate.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/currency-exchange-rate', currencyExchangeRate.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/currency-exchange-rate', { outlets: { popup: currencyExchangeRate.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
